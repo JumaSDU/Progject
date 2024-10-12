@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="education.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-container">
+            <ul id="nav">
+                <H1>JUMA</H1>
+                <li><a href="index.html" >Main</a></li>
+                <li><a href="family.html">family</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contacts.html">Contact Page</a></li>
+            </ul>
+        </div>
+        <div class="burger">
+            <span></span>
+        </div>
+        <div class="main">
+            <div class="m1">
+                <div class="m11">
+                    <img src="ed2.png" alt="" width="50%" >
+                    <img src="ed3.png" alt="" width="50%">
+                </div>
+
+                <div class="m12">
+                    <img src="ed4.png" alt="" width="25%">
+                    <h1>My education</h1>
+                    <h2>I’ve been studying at Suleyman Demirel University (SDU) since 2023. My faculty is IT, with a major in Computer Science.
+                        SDU is located in Kaskelen, Almaty, Kazakhstan, and is known for its focus on innovation and technology.</h2>
+                    <h3>
+                        I aspire to become a mobile developer, and currently, I am learning Flutter, a framework for building cross-platform mobile applications. Programming is a passion of mine, and I find it both challenging and exciting as I continue to explore different aspects of software development.
+                    </h3>
+                </div>
+
+            </div>
+            <div class="m2">
+
+            </div>
+
+        </div> 
+    </div>
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('#nav').classList.toggle('open');
+        })
+    </script>
+    
+</body>
+</html>

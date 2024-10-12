@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+.open{
+    display: flex !important;
+}
+body {
+	line-height: 1;
+    background-color: #fa4160;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+ table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container{
+    margin: 0 auto;
+    width: 80%;
+}
+.nav-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-top: 25px;
+	width: 100%;
+	margin-top: 10px;  
+    position: relative; 
+    
+}
+#nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+	align-items: center; 
+    gap: 25px;
+} 
+#nav li{
+    padding-right: 50px;
+    list-style: none;
+    padding: 10px 25px;
+    margin-left: 15px;
+    border-radius: 20px;
+    
+}
+#nav li a {
+    text-decoration: none;
+   
+   
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    
+}
+#nav h1{
+    position: absolute;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    font-size: 25px;
+    margin-right: 100px;
+    left: 0;
+    
+}
+#nav li:hover{
+    padding-right: 50px;
+    list-style: none;
+    background-color: #3e1ce7;
+    padding: 10px 25px;
+    margin-left: 15px;
+    border-radius: 20px;
+}
+.email-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.email-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50px;
+    flex-grow: 1;
+    color: #a7c3ff; 
+    font-family: Arial, sans-serif;
+}
+
+.email-input::placeholder {
+    color: #a7c3ff;
+}
+
+.email-btn {
+    background-color: white;
+    border: 2px solid #a7c3ff; 
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.email-btn:hover {
+    background-color: #f0f8ff; 
+}
+
+.email-btn span {
+    color: #a7c3ff; 
+    font-size: 18px;
+}
+.main{
+    margin-top: 100px;
+}
+.m1{
+    display: flex;
+    justify-content: space-between;
+
+}
+.icons{
+    display: flex;
+   
+}
+#icon{
+    display: flex;
+    gap: 5px;
+}
+.m2 h4{
+    font-size: 33px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: white;
+}
+h5{
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: white;
+}
+.m22{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 33%;
+    gap: 10px;
+}
+.m2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+}
+.burger{
+	display: none;
+	position: relative;
+	z-index: 50;
+	align-items: center;
+	justify-content: flex-end;
+	width: 30px;
+	height: 18px;
+}
+.burger span{
+	height: 2px;
+	width: 80%;
+	transform: scale(1);
+	background-color: aliceblue;
+}
+.burger::after , .burger::before{
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: aliceblue;
+	transition: all 0.3s ease 0s;
+}
+.burger::before{
+	top: 0;
+}
+.burger::after{
+	bottom: 0;
+}
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+@media (max-width: 1200px){
+    .container{
+        width: 100%;
+    }
+
+}
+@media (max-width: 900px){
+    
+    #nav li{
+        padding: 10px 0px;
+    }
+    
+    
+    
+
+
+    
+    
+
+}
+
+
+
+@media (max-width: 670px) {
+    #nav h1{
+        display: none;
+    }
+
+
+    .burger { 
+		display: flex ;
+        
+	}
+
+    #nav{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: black;
+        animation: burgerAnimation 0.4s;
+    }
+
+    #nav ul{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .m1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    
+    }
+
+    
+    
+}
+
+@keyframes burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+@media (max-width: 460px){
+    .m2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    
+    }
+    .email-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        padding: 10px;
+        background-color: white;
+        border-radius: 50px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+}
